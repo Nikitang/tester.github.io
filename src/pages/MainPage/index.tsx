@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import { FC } from 'react';
 import Card from '../../components/Card';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
@@ -7,8 +7,6 @@ import { Cards } from '../../utils/types';
 import styles from './MainPage.module.scss';
 
 const MainPage: FC = () => {
-    const [seminars, setSeminars] = useState({});
-
     const { data, isSuccess, refetch } = useQuery({
         queryKey: ['seminars'],
         queryFn: async () => {
@@ -20,7 +18,6 @@ const MainPage: FC = () => {
             return seminars as Array<Cards>;
         },
     });
-    console.log(data, 'ff');
 
     return (
         <div className={styles.main}>

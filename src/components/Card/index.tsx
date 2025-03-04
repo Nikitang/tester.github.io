@@ -1,11 +1,8 @@
-import { useMutation, useQuery } from '@tanstack/react-query';
-import axios from 'axios';
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 
 import styles from './Card.module.scss';
 import { Cards } from '../../utils/types';
 import ChangeModal from '../ChangeModal';
-import { toast } from 'react-toastify';
 import DeleteModal from '../DeleteModal';
 
 type CardProps = {
@@ -16,7 +13,6 @@ type CardProps = {
 const Card: FC<CardProps> = ({ data, refetch }) => {
     const [isChangeModalOpen, setIsChangeModalOpen] = useState(false);
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-    console.log(data.title, 'aaa444eees');
 
     return (
         <>

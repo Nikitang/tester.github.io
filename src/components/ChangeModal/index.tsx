@@ -43,7 +43,6 @@ const ChangeModal: FC<ChangeModalProps> = ({ onClose, data, refetch }) => {
 
     const handleSubmit = () => {
         mutate(form);
-        console.log(form, 'asdasdasd');
     };
 
     return (
