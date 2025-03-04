@@ -1,0 +1,116 @@
+.card {
+    position: relative;
+
+    width: clamp(18rem, 70vw, 28rem);
+    height: 350px;
+
+    box-shadow: 1px 1px 15px 5px #929292;
+    border-radius: 15px;
+    background-color: #fff;
+
+    transition: 0.2s;
+
+    &:hover {
+        box-shadow: 5px 5px 20px 10px #929292;
+        transform: scale(1.05);
+    }
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+
+    h1 {
+        font-size: clamp(16px, 2vw, 30px);
+        text-align: center;
+    }
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    div {
+        position: absolute;
+        top: 400%;
+        text-align: center;
+    }
+}
+
+.date {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+    display: flex;
+    gap: 4px;
+}
+
+.change {
+    position: absolute;
+
+    right: 28%;
+    bottom: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 22%;
+    height: 2rem;
+
+    border: 1px solid #ff8818;
+    border-radius: 5px;
+    background-color: #ff8818;
+
+    color: #fff;
+    font-size: clamp(10px, 1vw, 16px);
+
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #fff;
+        color: #ff8818;
+        cursor: pointer;
+    }
+}
+
+.delete {
+    position: absolute;
+
+    right: 5%;
+    bottom: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20%;
+    height: 2rem;
+
+    border: 1px solid #ff1818;
+    border-radius: 5px;
+    background-color: #ff1818;
+
+    color: #fff;
+    font-size: clamp(10px, 1vw, 16px);
+
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #fff;
+        color: #ff1818;
+        cursor: pointer;
+    }
+}
